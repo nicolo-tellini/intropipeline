@@ -1,0 +1,24 @@
+There were 50 or more warnings (use warnings() to see the first 50)
+	Command being timed: "Rscript /home/ntellini/TWO-assembly_pipe/scr/ClrS.V8.R Scc CBS432 Scc EU /home/ntellini/TWO-assembly_pipe"
+	User time (seconds): 2818.33
+	System time (seconds): 108.23
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 49:05.41
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3959900
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 25818800
+	Voluntary context switches: 2607
+	Involuntary context switches: 61460
+	Swaps: 0
+	File system inputs: 40
+	File system outputs: 1299720
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
