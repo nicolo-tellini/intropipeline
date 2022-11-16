@@ -23,7 +23,8 @@ cd introgression
 * [samtools](https://github.com/samtools/samtools/releases/tag/1.9) v. 1.9
 * [GEM](https://sourceforge.net/projects/gemlibrary/files/gem-library/Binary%20pre-release%203/) v. 1.315 (beta)
 !! The GEM version used for the analyses is 1.759 (not available anymore). 
-* [Control-FREEC](https://github.com/BoevaLab/FREEC/releases/tag/v11.6) v. 11.6
+* [Control-FREEC](https://github.com/BoevaLab/FREEC/releases/tag/v11.6) v. 11.6; makeGraph.R script was renamed makeplotcnv.R
+* A copy of [sambamba](https://github.com/biod/sambamba/releases/tag/v0.6.5) v. 0.6.5 is provided with the pipeline (no installation required)
 
 ### R libraries
 
