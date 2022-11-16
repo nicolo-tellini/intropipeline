@@ -43,4 +43,16 @@ cd introgression
 
 * v1.0.0 released on 2023
 
+## TO-DO list
 
+### short-term updates
+- rename columns names ClrS
+- contest
+- fig. scheme and res example
+
+### long-term updates
+- simplify ClrS
+- traffic light to solve main bottlenecks 
+- heatmap events
+- implement [interactive plots](https://nbviewer.org/github/nicolo-tellini/introspect/blob/loaded/introgression-interactive.html)
+- software update(?)
