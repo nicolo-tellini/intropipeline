@@ -11,15 +11,16 @@ An automated computational framework for detecting *S.par* introgressions in *S.
 ## Download
 
 ```sh
-git clone https://github.com/nicolo-tellini/sppComb.git
-cd sppComb
+https://github.com/nicolo-tellini/introgression.git
+cd introgression
 ```
 
 ## Dependencies
 
 ### Softwares
-* [samtools](https://github.com/samtools/samtools/releases) v1.14 
-* [bwa-mem2](https://github.com/bwa-mem2/bwa-mem2)
+* [FastQC](https://github.com/s-andrews/FastQC/releases/tag/v0.11.9) v0.11.9
+* [bwa](https://github.com/lh3/bwa/releases/tag/v0.7.17) v0.7.17-r1198-dirty
+* [samtools] (https://github.com/samtools/samtools/releases/tag/1.9) v1.9
 
 ### R libraries
 * [Biostrings](https://www.bioconductor.org/packages/release/bioc/html/Biostrings.html)
