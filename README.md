@@ -1,4 +1,4 @@
-# introgression
+# introgression <- cambia nome
 
 Pipeline used in Tellini et al 20xx for detecting *S.par* introgressions in *S.cer* diploid strains.
 
