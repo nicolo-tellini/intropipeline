@@ -23,8 +23,7 @@ cd introgression
 * [samtools](https://github.com/samtools/samtools/releases/tag/1.9) v. 1.9
 * [GEM](https://sourceforge.net/projects/gemlibrary/files/gem-library/Binary%20pre-release%203/) v. 1.315 (beta)
 !! The GEM version used for the analyses is 1.759 (not available anymore). 
-
-Control-FREEC v11.6
+* [Control-FREEC](https://github.com/BoevaLab/FREEC/releases/tag/v11.6) v. 11.6
 
 ### R libraries
 
