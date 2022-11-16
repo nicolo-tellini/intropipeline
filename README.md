@@ -1,12 +1,14 @@
 # introgression <- cambia nome
 
-Pipeline used in Tellini et al 20xx for detecting *S.par* introgressions in *S.cer* diploid strains.
-
-**Scer <-- Spar Introgressions**
-
-An automated computational framework for detecting *S.par* introgressions in *S.cer* diploid strains from large datasets of paired-end illumina reads.
+[]logospace
 
 ## Description
+
+An automated computational framework for detecting *S.par* introgressions in *S.cer* diploid strains from paired-end illumina sequencing.
+
+**Scer <-- Spar Introgressions** sheme
+
+Pipeline used in Tellini et al 20xx for detecting *S.par* introgressions in *S.cer* diploid strains. bla bla bla 
 
 ## Download
 
@@ -36,6 +38,9 @@ cd introgression
 * [seqinr](https://cran.r-project.org/src/contrib/Archive/seqinr/) v. 4.2-8
 
 ## Find out more about 
+bla bla bla
+
+# FAQ
 
 ## Citations
 
