@@ -1,6 +1,6 @@
 # introgression <- cambia nome
 
-[]logospace
+![introgression](https://github.com/nicolo-tellini/LICO/blob/main/lico3.png)
 
 ## Description
 
