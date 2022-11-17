@@ -143,40 +143,46 @@ The number of markers supporting the blocks, the marker density and the info con
 * [rtracklayer](http://www.bioconductor.org/packages/3.11/bioc/html/rtracklayer.html) v. 1.48.0
 * [seqinr](https://cran.r-project.org/src/contrib/Archive/seqinr/) v. 4.2-8
 
-## Find out more
-
-bla bla bla
-
 ## FAQ
 
-Q: Why do I have Y/N options in runner.sh ? </br>
-A: Because if one step fails you want to restart the run from the step failed.
+**Q**: Why do I have Y/N options in runner.sh ? </br>
+**A**: Because if one step fails you want to restart the run from the step failed.
 
-Q: Why do I need to specify the *S.par* assembly in the runner.sh if the markers are pre-computed ? </br>
-A: The pipeline performs 2 mappings: one against *S.c* consensus and one against *S.par* assembly; choosing the *S.par* assembly that fits better the introgressions facilitates the mapping.   
+**Q**: Why do I need to specify the *S.par* assembly in the runner.sh if the markers are pre-computed ? </br>
+**A**: The pipeline performs 2 mappings: one against *S.c* consensus and one against *S.par* assembly; choosing the *S.par* assembly that fits better the introgressions facilitates the mapping.   
 
-Q: How do I interpreter the results ? </br>
-A: [see here](https://github.com/nicolo-tellini/introspect/edit/loaded/README.md#how-to-interprer-the-result)
+**Q**: How do I interpreter the results ? </br>
+**A**: [see here](https://github.com/nicolo-tellini/introspect/edit/loaded/README.md#how-to-interprer-the-result)
 
-Q: What is the reason because there are blocks such as the one reported in **Case 2** ? </br>
-A: There are several reasons because of these blocks:
+**Q**: What is the reason because there are blocks such as the one reported in **Case 2** ? </br>
+**A**: There are several reasons because of these blocks:
    - there are *no* marker positions to genotype because pseudogenes/Ty/tRNA elements in the assemblies generated umbigous alignment,
    - the markers have been genotyped but discarderd because of : 
       - QUAL (QUAL < 20),
       - discordance between the call against *S.c* consensus and *S.par* assembly (different GT or allele),
       - CNV (markers in CNVs are discarded).
 
-Q: How do I deal with blocks supported by a scarse number of markers ? Can I trust them ? </br>
-A: You can filter out the blocks supported by a few consecutive markers. In Tellini et. all 20xx we retaned only blocks supported by 5 consecutive markers. Higher the threshold more relialable the results **but** keep in mind that increasing the threshold you may miss biological relevant introgressions. 
+**Q**: How do I deal with blocks supported by a scarse number of markers ? Can I trust them ? </br>
+**A**: You can filter out the blocks supported by a few consecutive markers. In Tellini et. all 20xx we retaned only blocks supported by 5 consecutive markers. Higher the threshold more relialable the results **but** keep in mind that increasing the threshold you may miss biological relevant introgressions. 
 
-Q: I see a single large *S.par* introgression overlapping the subtelomeric region, is it an HGT? </br>
-A: You cannot discriminate between introgressions and HGTs. Nevertheless, HGTs occur mainly in subtelomeric regions while genome-spread *S.par* blocks may indicate they are the result of the introgression process ([Melania et al. 2018](https://www.nature.com/articles/s41586-020-2889-1)).
+**Q**: I see a single large *S.par* introgression overlapping the subtelomeric region, is it an HGT? </br>
+**A**: You cannot discriminate between introgressions and HGTs. Nevertheless, HGTs occur mainly in subtelomeric regions while genome-spread *S.par* blocks may indicate they are the result of the introgression process ([Melania et al. 2018, Nature](https://www.nature.com/articles/s41586-020-2889-1)).
 
-Q: Any ways for validating doubt but relevant *S.par* blocks? (there is my favorite gene down there)  </br>
-A: Some : 
-  - checking both the mapping by eyes (IGV) already provides a good indication of what is happening, 
-  - generate a phylogeny 
-  - run a competitive mapping 
+**Q**: Any ways for validating doubt but relevant *S.par* blocks? (there is my favorite gene down there)  </br>
+**A**: Some : 
+  - Checking both the mappings provides a good indication of what is happening (annotations are in ```ref/Ann```),
+  - Check if the markers were available (```rep/mrktab.txt```) and, eventually, at what STEP they were discarded, 
+  - Competitive mapping *S.c-S par*, 
+  - Phylogenetic methods,
+  - further evalutaion with long-read data.
+
+**Q**: Are subelomeric and telomeric regions evaluated ? (there is my favorite gene down there)  </br>
+**A**: No, subetelomeric and telomeric regions (as defined in [Jia-Xing Yue et al. 2017, Nature Genetics](https://www.nature.com/articles/ng.3847)) are excluded. Because of the *S.cer* introgression at the beginning of chrXIV ([Liti et al. 2006, Genetics](https://academic.oup.com/genetics/article/174/2/839/6061582#326019337)) in the European *S.par* also this region is excluded. 
+
+## Find out more
+
+*S.cer* consensus assembly [link method paper]
+Marker definition [link method paper]
  
 ## Citations
 
