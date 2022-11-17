@@ -11,13 +11,15 @@ An automated computational framework for detecting *S.par* introgressions in *S.
 Pipeline used in Tellini et al 20xx for detecting *S.par* introgressions in *S.cer* diploid strains. bla bla bla 
 
 ## Download
-
+ 
+:octocat:
+  
 ```sh
 https://github.com/nicolo-tellini/introgression.git
 cd introgression
 ```
 
-## Github Content :octocat:
+## Github Content
 
 :open_file_folder: :
 
@@ -44,7 +46,7 @@ Paired-end FASTQs data **must** be gziped and suffixed with **.R1.fastq.gz** and
 
 ### How to run
 
- Edit ```runner.sh``` 
+Edit ```runner.sh``` :page_with_curl: 
 
 ```{bash}
 #!/bin/bash
