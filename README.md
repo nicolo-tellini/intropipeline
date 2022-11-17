@@ -120,7 +120,7 @@ Q: Why do I have Y/N options in runner.sh ? </br>
 A: Because if one step fails you want to restart the run from the step failed.
 
 Q: Why do I need to specify the *S.par* assembly in the runner.sh if the markers are pre-computed ? </br>
-A: The pipeline performs 2 mappings, choosing the *S.par* assembly more smilar to the introgressions facilitates the mapping.   
+A: The pipeline performs 2 mappings: one against *S.c* consensus and one against *S.par* assembly; choosing the *S.par* assembly more smilar to the introgressions facilitates the mapping.   
 
 ## Citations
 
