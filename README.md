@@ -15,7 +15,7 @@ Pipeline used in Tellini et al 20xx for detecting *S.par* introgressions in *S.c
 :octocat:
   
 ```sh
-https://github.com/nicolo-tellini/introgression.git
+git clone --recurse https://github.com/nicolo-tellini/introgression.git
 cd introgression
 ```
 
