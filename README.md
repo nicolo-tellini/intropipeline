@@ -17,6 +17,31 @@ https://github.com/nicolo-tellini/introgression.git
 cd introgression
 ```
 
+## Github Content
+
+:open_file_folder: :
+
+```{bash}
+.
+├── rep
+│   ├── Ann
+│   └── Asm
+├── runner.sh
+├── scr
+└── seq
+
+5 directories 1 file
+```
+
+- ```rep``` : repository with assemblies, annotations and pre-computed marker table,</br>
+- ```runner.sh``` : the script you have to edit and run,</br>
+- ```scr``` : scripts,</br>
+- ```seq``` : put the FASTQs files here,</br>
+
+### About the fastqs 
+
+Paired-end FASTQs data **must** be gziped and suffixed with **.R1.fastq.gz** and **.R2.fastq.gz**.
+
 ## Dependencies
 
 ### Softwares
