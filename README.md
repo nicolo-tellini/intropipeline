@@ -17,7 +17,7 @@ https://github.com/nicolo-tellini/introgression.git
 cd introgression
 ```
 
-## Github Content
+## Github Content :octocat:
 
 :open_file_folder: :
 
@@ -41,6 +41,56 @@ cd introgression
 ### About the fastqs 
 
 Paired-end FASTQs data **must** be gziped and suffixed with **.R1.fastq.gz** and **.R2.fastq.gz**.
+
+### How to run
+
+ Edit ```runner.sh``` 
+
+```{bash}
+#!/bin/bash
+
+#####################
+### user settings ###
+#####################
+
+## S. paradoxus reference assembly
+
+ref2Label="CBS432" ## choose the Spar assembly you think better fit the origin of your samples
+
+## short labels (used to name file)
+
+ref2="EU" ## choose a short name for Spar
+
+# STEP 1
+fastqQC="yes" ## fastqc control (required) ("yes","no" or "-" the last is skip)
+
+# STEP 2
+shortReadMapping="yes" ## ("yes","no")
+
+# STEP 3
+mrkgeno="yes" ## ("yes","no")
+
+# STEP 4
+cnv="yes" ## ("yes","no")
+
+# STEP 5
+intro="yes" ## ("yes","no")
+
+#####################
+### settings' end ###
+#####################
+```
+
+Why do I have Y/N options ?
+
+Because if one step fails you want to restart the run from the step the pipeline failed.
+
+Run ```runner.sh``` :runner: 
+
+```{bash}
+nohup bash runner.sh &
+```
+
 
 ## Dependencies
 
