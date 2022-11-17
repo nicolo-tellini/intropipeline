@@ -19,7 +19,7 @@ git clone --recursive https://github.com/nicolo-tellini/introgression.git
 cd introgression
 ```
 
-## Github Content
+## Content
 
 :open_file_folder: :
 
