@@ -93,9 +93,31 @@ nohup bash runner.sh &
 
 
 ## How to interprer the result
-The interpretation of the results is a process that require the integration of different data the pipeline produces.
 
-A toy example : 
+The interpretation of the results is a process that require the integration of different data the pipeline produces.
+Blue-Red plots provides an overview of potential introgressed DNA across the genome :
+
+<p align="center">
+  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/res1.png" alt="Sublime's custom image"/>
+</p>
+
+:exclamation: Reminder: blocks are defined as consecutive markers besring the same genomic infos (Homo S.cer, Homo S.par, Het).
+
+How are markers distributed inside the *S.par* block?
+
+A couple of possible scenarious: 
+
+**Case 1**: abundant markers suporting the block
+<p align="center">
+  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/res2.png" alt="Sublime's custom image"/>
+</p>
+
+**Case 2**: *not* so abundant markers suporting the block
+<p align="center">
+  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/res3.png" alt="Sublime's custom image"/>
+</p>
+
+The number of markers supporting the blocks, the marker density and the info concerning the genotype are stored in ```int``` and ```int/AllSegments```. 
 
 
 ## Dependencies
