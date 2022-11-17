@@ -83,20 +83,16 @@ intro="yes" ## ("yes","no")
 #####################
 ```
 
-Why do I have Y/N options ?
-
-Because if one step fails you want to restart the run from the step the pipeline failed.
-
 Run ```runner.sh``` :runner: 
 
 ```{bash}
 nohup bash runner.sh &
 ```
 
-
 ## Dependencies
 
 ### Softwares
+
 * [FastQC](https://github.com/s-andrews/FastQC/releases/tag/v0.11.9) v. 0.11.9
 * [bwa](https://github.com/lh3/bwa/releases/tag/v0.7.17) v. 0.7.17-r1198-dirty
 * [samtools](https://github.com/samtools/samtools/releases/tag/1.9) v. 1.9
@@ -114,10 +110,14 @@ nohup bash runner.sh &
 * [rtracklayer](http://www.bioconductor.org/packages/3.11/bioc/html/rtracklayer.html) v. 1.48.0
 * [seqinr](https://cran.r-project.org/src/contrib/Archive/seqinr/) v. 4.2-8
 
-## Find out more about 
+## Find out more
+
 bla bla bla
 
-# FAQ
+## FAQ
+
+Q: Why do I have Y/N options in runner.sh ?
+A: Because if one step fails you want to restart the run from the step failed.
 
 ## Citations
 
