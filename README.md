@@ -90,6 +90,9 @@ nohup bash runner.sh &
 ```
 ## The result
 
+<p align="center">
+  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/example-result.png)" alt="res"/>
+</p>
 
 
 ## How to interprer the result
@@ -183,6 +186,7 @@ The number of markers supporting the blocks, the marker density and the info con
 ## Find out more
 
 *S.cer* consensus assembly [link method paper]
+
 Marker definition [link method paper]
  
 ## Citations
