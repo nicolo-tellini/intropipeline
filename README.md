@@ -91,7 +91,7 @@ nohup bash runner.sh &
 ## The result
 
 <p align="center">
-  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/example-result.png)" alt="res"/>
+  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/example-result.png" alt="res"/>
 </p>
 
 
