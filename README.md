@@ -116,7 +116,7 @@ bla bla bla
 
 ## FAQ
 
-Q: Why do I have Y/N options in runner.sh ?
+Q: Why do I have Y/N options in runner.sh ? </br>
 A: Because if one step fails you want to restart the run from the step failed.
 
 ## Citations
