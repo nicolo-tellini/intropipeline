@@ -159,8 +159,8 @@ Q: How do I interpreter the results ? </br>
 A: [see here](https://github.com/nicolo-tellini/introspect/edit/loaded/README.md#how-to-interprer-the-result)
 
 Q: What is the reason because there are blocks such as the one reported in **Case 2** ? </br>
-A: There are several reason because of these blocks:
-   - there are *no* marker positions to genotype because of repetitive elements/pseudogenes/Ty/tRNA elements and so on,
+A: There are several reasons because of these blocks:
+   - there are *no* marker positions to genotype because pseudogenes/Ty/tRNA elements in the assemblies generated umbigous alignment,
    - the markers have been genotyped but discarderd because of : 
       - QUAL (QUAL < 20),
       - discordance between the call against *S.c* consensus and *S.par* assembly (different GT or allele),
@@ -170,9 +170,14 @@ Q: How do I deal with blocks supported by a scarse number of markers ? Can I tru
 A: You can filter out the blocks supported by a few consecutive markers. In Tellini et. all 20xx we retaned only blocks supported by 5 consecutive markers. Higher the threshold more relialable the results **but** keep in mind that increasing the threshold you may miss biological relevant introgressions. 
 
 Q: I see a single large *S.par* introgression overlapping the subtelomeric region, is it an HGT? </br>
-A: You cannot discriminate between introgressions and HGTs. Nevertheless, HGTs occure mainly in subtelomeric regions and genome-spread *S.par* blocks may indicate they are problaly the result of the introgression process ([Melania et al. 2018](https://www.nature.com/articles/s41586-020-2889-1)).
+A: You cannot discriminate between introgressions and HGTs. Nevertheless, HGTs occur mainly in subtelomeric regions while genome-spread *S.par* blocks may indicate they are the result of the introgression process ([Melania et al. 2018](https://www.nature.com/articles/s41586-020-2889-1)).
 
-
+Q: Any ways for validating doubt but relevant *S.par* blocks? (there is my favorite gene down there)  </br>
+A: Some : 
+  - checking both the mapping by eyes (IGV) already provides a good indication of what is happening, 
+  - generate a phylogeny 
+  - run a competitive mapping 
+ 
 ## Citations
 
 ## Release history
