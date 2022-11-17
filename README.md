@@ -88,6 +88,15 @@ Run ```runner.sh``` :runner:
 ```{bash}
 nohup bash runner.sh &
 ```
+## The result
+
+
+
+## How to interprer the result
+The interpretation of the results is a process that require the integration of different data the pipeline produces.
+
+A toy example : 
+
 
 ## Dependencies
 
@@ -121,6 +130,10 @@ A: Because if one step fails you want to restart the run from the step failed.
 
 Q: Why do I need to specify the *S.par* assembly in the runner.sh if the markers are pre-computed ? </br>
 A: The pipeline performs 2 mappings: one against *S.c* consensus and one against *S.par* assembly; choosing the *S.par* assembly more smilar to the introgressions facilitates the mapping.   
+
+Q: How do I interpreter the results ? </br>
+A: [see here](https://github.com/nicolo-tellini/introspect/edit/loaded/README.md#how-to-interprer-the-result)
+
 
 ## Citations
 
