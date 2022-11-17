@@ -1,15 +1,14 @@
-# introgressionPipe
+# introgression
+
+An automated computational framework for detecting *Saccahromyces paradoxus* introgressions in *Saccahromyces cerevisiae* diploid strains from paired-end illumina sequencing.
 
 <p align="center">
   <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/logo2.png" alt="Sublime's custom image"/>
 </p>
+
 ## Description
 
-An automated computational framework for detecting *S.par* introgressions in *S.cer* diploid strains from paired-end illumina sequencing.
-
-**Scer <-- Spar Introgressions** sheme
-
-Pipeline used in Tellini et al 20xx for detecting *S.par* introgressions in *S.cer* diploid strains. bla bla bla 
+Pipeline described in Tellini et al 20xx for detecting *S.par* introgressions in *S.cer* diploid strains.
 
 ## Download
  
