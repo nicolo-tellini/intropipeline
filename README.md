@@ -167,9 +167,10 @@ A: There are several reason because of these blocks:
       - CNV (markers in CNVs are discarded).
 
 Q: How do I deal with blocks supported by a scarse number of markers ? Can I trust them ? </br>
-A: You can filter out the blocks supported by a few consecutive markers. In Tellini et. all 20xx we retaned only blocks supported by 5 consecutive markers. Higher is the threshold and more relialable the results are but keep in mind that to increasing the threshold you may miss biological relevant introgressions. 
+A: You can filter out the blocks supported by a few consecutive markers. In Tellini et. all 20xx we retaned only blocks supported by 5 consecutive markers. Higher the threshold more relialable the results **but** keep in mind that increasing the threshold you may miss biological relevant introgressions. 
 
-
+Q: I see a single large *S.par* introgression overlapping the subtelomeric region, is it an HGT? </br>
+A: You cannot discriminate between introgressions and HGTs. Nevertheless, HGTs occure mainly in subtelomeric regions and genome-spread *S.par* blocks may indicate they are problaly the result of the introgression process ([Melania et al. 2018](https://www.nature.com/articles/s41586-020-2889-1)).
 
 
 ## Citations
