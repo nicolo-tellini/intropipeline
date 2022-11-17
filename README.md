@@ -111,6 +111,7 @@ A couple of possible scenarious:
 <p align="center">
   <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/res2.png" alt="Sublime's custom image"/>
 </p>
+
 :exclamation: Note: Only a few markers in the figure above are represented in the cartoon; 
 
 **Case 2**: *not* so abundant markers suporting the block
@@ -118,7 +119,7 @@ A couple of possible scenarious:
   <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/res3.png" alt="Sublime's custom image"/>
 </p>
 
-:exclamation: Note: Nevertheless, you should *not* exclude the possibility that a large events is supported by a low number of markers as in the example. 
+:exclamation: Note: you should *not* exclude the possibility that a large events is supported by a low number of markers as in the example. 
 
 The number of markers supporting the blocks, the marker density and the info concerning the genotype are stored in ```int``` and ```int/AllSegments```. 
 
