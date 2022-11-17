@@ -1,7 +1,8 @@
-# introgression <- cambia nome
+# introgressionPipe
 
-![introgression](https://github.com/nicolo-tellini/LICO/blob/main/lico3.png)
-
+<p align="center">
+  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/logo2.png" alt="Sublime's custom image"/>
+</p>
 ## Description
 
 An automated computational framework for detecting *S.par* introgressions in *S.cer* diploid strains from paired-end illumina sequencing.
