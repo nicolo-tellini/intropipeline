@@ -12,7 +12,7 @@ Pipeline described in Tellini et al 20xx for detecting *S.par* introgressions in
 
 ## Download
  
-:octocat:
+:octocat: :
   
 ```sh
 git clone --recursive https://github.com/nicolo-tellini/introgression.git
