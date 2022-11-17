@@ -111,14 +111,15 @@ A couple of possible scenarious:
 <p align="center">
   <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/res2.png" alt="Sublime's custom image"/>
 </p>
+:exclamation: Note: Only a few markers in the figure above are represented in the cartoon; 
 
 **Case 2**: *not* so abundant markers suporting the block
 <p align="center">
   <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/res3.png" alt="Sublime's custom image"/>
 </p>
+:exclamation: Note: Nevertheless, you should *not* exclude the possibility that a large events is supported by a low number of markers as in the example. 
 
 The number of markers supporting the blocks, the marker density and the info concerning the genotype are stored in ```int``` and ```int/AllSegments```. 
-
 
 ## Dependencies
 
@@ -155,6 +156,20 @@ A: The pipeline performs 2 mappings: one against *S.c* consensus and one against
 
 Q: How do I interpreter the results ? </br>
 A: [see here](https://github.com/nicolo-tellini/introspect/edit/loaded/README.md#how-to-interprer-the-result)
+
+Q: What is the reason because there are blocks such as the one reported in **Case 2** ? </br>
+A: There are several reason because of these blocks:
+   - there are *no* marker positions to genotype because of repetitive elements/pseudogenes/Ty/tRNA elements and so on,
+   - the markers have been genotyped but discarderd because of : 
+    - mapping quality of the reads, 
+    - QUAL filtering, 
+    - discordance between the genotype/allele against *S.c* consensus and *S.par* assembly,
+    - CNV.
+
+Q: How do I deal with blocks supported by a scarse number of markers ? Can I trust them ? </br>
+A: You can filter out the blocks supported by a few consecutive markers. In Tellini et. all 20xx we retaned only blocks supported by 5 consecutive markers. Higher is the threshold and more relialable the results are but keep in mind that to increasing the threshold you may miss biological relevant introgressions. 
+
+
 
 
 ## Citations
