@@ -152,7 +152,7 @@ The number of markers supporting the blocks, the marker density and the info con
 **A**: The pipeline performs 2 mappings: one against *S.c* consensus and one against *S.par* assembly; choosing the *S.par* assembly that fits better the introgressions facilitates the mapping.   
 
 **Q**: How do I interpreter the results ? </br>
-**A**: [see here](https://github.com/nicolo-tellini/introspect/edit/loaded/README.md#how-to-interprer-the-result)
+**A**: [see here](https://github.com/nicolo-tellini/introspect#how-to-interprer-the-result)
 
 **Q**: What is the reason because there are blocks such as the one reported in **Case 2** ? </br>
 **A**: There are several reasons because of these blocks:
