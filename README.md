@@ -90,6 +90,8 @@ nohup bash runner.sh &
 ```
 ## The result
 
+An Alpechin strain:
+
 <p align="center">
   <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/example-result.png" alt="res"/>
 </p>
@@ -97,14 +99,16 @@ nohup bash runner.sh &
 
 ## How to interprer the result
 
+Blue-Red plots provides an overview of potential introgressed DNA across the genome.
 The interpretation of the results is a process that require the integration of different data the pipeline produces.
-Blue-Red plots provides an overview of potential introgressed DNA across the genome :
 
 <p align="center">
   <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/res1.png" alt="Sublime's custom image"/>
 </p>
 
 :exclamation: Reminder: blocks are defined as consecutive markers besring the same genomic infos (Homo S.cer, Homo S.par, Het).
+
+<br />
 
 How are markers distributed inside the *S.par* block?
 
@@ -116,6 +120,7 @@ A couple of possible scenarious:
 </p>
 
 :exclamation: Note: Only a few markers in the figure above are represented in the cartoon; 
+
 
 **Case 2**: *not* so abundant markers suporting the block
 <p align="center">
