@@ -150,7 +150,7 @@ The number of markers supporting the blocks, the marker density and the info con
 ## FAQ
 
 **Q**: Why do I have Y/N options in runner.sh ? </br>
-**A**: Because if one step fails you want to restart the run from the step failed.
+**A**: Because if one step fails you want to restart the run from the failed step.
 
 **Q**: Why do I need to specify the *S.par* assembly in the runner.sh if the markers are pre-computed ? </br>
 **A**: The pipeline performs 2 mappings: one against *S.c* consensus and one against *S.par* assembly; choosing the *S.par* assembly that fits better the introgressions facilitates the mapping.   
@@ -181,7 +181,7 @@ The number of markers supporting the blocks, the marker density and the info con
   - further evalutaion with long-read data.
 
 **Q**: Are subelomeric and telomeric regions evaluated ? </br>
-**A**: No, subetelomeric and telomeric regions (as defined in [Jia-Xing Yue et al. 2017, Nature Genetics](https://www.nature.com/articles/ng.3847)) are excluded. Because of the *S.cer* introgression at the beginning of chrXIV ([Liti et al. 2006, Genetics](https://academic.oup.com/genetics/article/174/2/839/6061582#326019337)), in the European *S.par*, this region is excluded. 
+**A**: No, subetelomeric and telomeric regions (as defined in [Jia-Xing Yue et al. 2017, Nature Genetics](https://www.nature.com/articles/ng.3847)) are excluded. Because of the *S.cer* introgression at the beginning of chrXIV ([Liti et al. 2006, Genetics](https://academic.oup.com/genetics/article/174/2/839/6061582#326019337)), in the European *S.par*, this region is excluded from the results. 
 
 ## Find out more
 
