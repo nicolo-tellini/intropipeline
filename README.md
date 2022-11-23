@@ -15,8 +15,8 @@ Pipeline described in Tellini et al 20xx for detecting *S.par* introgressions in
 :octocat: :
   
 ```sh
-git clone --recursive https://github.com/nicolo-tellini/introgression.git
-cd introgression
+git clone --recursive https://github.com/nicolo-tellini/introspect.git
+cd introspect
 ```
 
 ## Content
@@ -36,7 +36,7 @@ cd introgression
 ```
 
 - ```rep``` : repository with assemblies, annotations and pre-computed marker table,</br>
-- ```runner.sh``` : the script you have to edit and run,</br>
+- ```runner.sh``` : the script you edit and run,</br>
 - ```scr``` : scripts,</br>
 - ```seq``` : put the FASTQs files here,</br>
 
@@ -172,13 +172,13 @@ The number of markers supporting the blocks, the marker density and the info con
 **Q**: I see a single large *S.par* introgression overlapping the subtelomeric region, is it an HGT? </br>
 **A**: You cannot discriminate between introgressions and HGTs. Nevertheless, HGTs occur mainly in subtelomeric regions while genome-spread *S.par* blocks may indicate they are the result of the introgression process ([Melania et al. 2018, Nature](https://www.nature.com/articles/s41586-020-2889-1)).
 
-**Q**: Any ways for validating doubt but relevant *S.par* blocks? (there is my favorite gene down there)  </br>
+**Q**: How do I validate doubt but relevant *S.par* blocks? (there is my favorite gene down there)  </br>
 **A**: Some : 
   - Checking both the mappings provides a good indication of what is happening (annotations are in ```ref/Ann```),
   - Check if the markers were available (```rep/mrktab.txt```) and, eventually, at what STEP they were discarded, 
   - Competitive mapping *S.c-S par*, 
   - Phylogenetic methods,
-  - further evalutaion with long-read data.
+  - Further evalutaion with long-read data.
 
 **Q**: Are subelomeric and telomeric regions evaluated ? </br>
 **A**: No, subetelomeric and telomeric regions (as defined in [Jia-Xing Yue et al. 2017, Nature Genetics](https://www.nature.com/articles/ng.3847)) are excluded. Because of the *S.cer* introgression at the beginning of chrXIV ([Liti et al. 2006, Genetics](https://academic.oup.com/genetics/article/174/2/839/6061582#326019337)), in the European *S.par*, this region is excluded from the results. 
