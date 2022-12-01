@@ -98,6 +98,10 @@ nohup bash runner.sh &
 ```
 ## The result
 
+The results concerning the introgressions are stored in ```./int```
+
+Ex. 
+
 An Alpechin strain:
 
 <p align="center">
