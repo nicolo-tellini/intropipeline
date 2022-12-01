@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BaseDir=$1
-Nthreads=10
+Nthreads=2
 Nruns=2
 
 cd $BaseDir
