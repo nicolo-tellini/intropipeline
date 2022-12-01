@@ -40,7 +40,15 @@ cd introspect
 - ```scr``` : scripts,</br>
 - ```seq``` : put the FASTQs files here,</br>
 
+### Before starting 
+
+``` gzip -d ./rep/mrktab.gz ```
+
+``` gzip -d ./rep/Asm/*gz```
+
 ### About the fastqs 
+
+Move the FASTQs inside ```./seq/```
 
 Paired-end FASTQs data **must** be gziped and suffixed with **.R1.fastq.gz** and **.R2.fastq.gz**.
 
