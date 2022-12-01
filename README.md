@@ -3,7 +3,7 @@
 An automated computational framework for detecting *Saccahromyces paradoxus* introgressions in *Saccahromyces cerevisiae* diploid strains from paired-end illumina sequencing.
 
 <p align="center">
-  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/logo2.png" alt="Sublime's custom image"/>
+  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/img/logo2.png" alt="Sublime's custom image"/>
 </p>
 
 ## Description
@@ -93,7 +93,7 @@ nohup bash runner.sh &
 An Alpechin strain:
 
 <p align="center">
-  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/example-result.png" alt="res"/>
+  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/img/example-result.png" alt="res"/>
 </p>
 
 
@@ -103,10 +103,10 @@ Blue-Red plots provides an overview of potential introgressed DNA across the gen
 The interpretation of the results is a process that require the integration of different data the pipeline produces.
 
 <p align="center">
-  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/res1.png" alt="Sublime's custom image"/>
+  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/img/res1.png" alt="Sublime's custom image"/>
 </p>
 
-:exclamation: Reminder: blocks are defined as consecutive markers besring the same genomic infos (Homo S.cer, Homo S.par, Het).
+:exclamation: Reminder: blocks are defined as consecutive markers besring the same genomic info (Homo S.cer, Homo S.par, Het).
 
 <br />
 
@@ -116,7 +116,7 @@ A couple of possible scenarious:
 
 **Case 1**: abundant markers suporting the block
 <p align="center">
-  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/res2.png" alt="Sublime's custom image"/>
+  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/img/res2.png" alt="Sublime's custom image"/>
 </p>
 
 :exclamation: Note: Only a few markers in the figure above are represented in the cartoon; 
@@ -124,7 +124,7 @@ A couple of possible scenarious:
 
 **Case 2**: *not* so abundant markers suporting the block
 <p align="center">
-  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/res3.png" alt="Sublime's custom image"/>
+  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/img/res3.png" alt="Sublime's custom image"/>
 </p>
 
 :exclamation: Note: you should *not* exclude the possibility that a large events is supported by a low number of markers as in the example. 
