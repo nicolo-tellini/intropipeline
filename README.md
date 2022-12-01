@@ -168,12 +168,7 @@ Marker definition [link method paper]
 
 ### short-term updates
 - rename columns names ClrS
-- contest
-- fig. scheme and res example
 
 ### long-term updates
-- simplify ClrS
-- traffic light to solve main bottlenecks 
-- heatmap events
+- traffic light bash
 - implement [interactive plots](https://nbviewer.org/github/nicolo-tellini/introspect/blob/loaded/introgression-interactive.html)
-- software update(?)
