@@ -240,9 +240,7 @@ The number of markers supporting the blocks, the marker density and the info con
 
 ## Find out more
 
-*S.cer* consensus assembly [link method paper]
-
-Marker definition [link method paper]
+Marker definition [Methods]()
  
 ## Citations
 
