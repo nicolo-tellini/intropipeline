@@ -37,7 +37,7 @@ v1.1. contains the following implementations and changes:
   | script  | Elapsed Time | Maximum resident set size (GB) |
   | ------------- | ------------- | ------------- |
   | bwa mem + samtools (v1) | 6:21 (m:ss) | 1.3   |
-  | minimap2 + samtools (v2) | 3:36 (m:ss) | 1.3  |
+  | minimap2 + samtools (v1.1) | 3:36 (m:ss) | 1.3  |
   
 - improved the reproducibility of the mapping by implementing the standard samtools workflow according to [samtools' guideline](http://www.htslib.org/workflow/fastq.html)
 - improved the roboustness of the mapping by appending the name of the strain to a checkpoint (cps) file (```./cps/cps.txt```). The strains which names are stored in ```./cps/cps.txt``` will not be mapped again.
@@ -55,17 +55,17 @@ v1.1. contains the following implementations and changes:
   | script  | Elapsed Time (s) | Maximum resident set size (GB) |
   | ------------- | ------------- | ------------- |
   | parser_marker.r (v1)  | 0:17 s | 0.8 |
-  |  parser_marker.r (v2)  | 0:06 s | 0.5 |
+  |  parser_marker.r (v1.1)  | 0:06 s | 0.5 |
   | clrs.r (v1) | 0:49 s  | 1.9 |
-  | clrs.r (v2) | 0:17 s  | 0.7 |
+  | clrs.r (v1.1) | 0:17 s  | 0.7 |
   
 - introduced the variables ```nSamples``` and ```nThreads``` inside ```runner.sh```. The first variable controls the number of samples to run in paralell and the second the per-samples number of threads. ```nSamples``` guarantees a contant number of samples running in parallel; as soon as the count drop of one sample an other will start to run. The definition of these variables affect the scripts ```minimap2.sh``` (which replaces ```bwa.sh```), ```bcftools_markers.sh``` (which replaces ```samtools_marker.sh```) and ```freec.sh```;
 - corrected an error that prevented the detection of the CNVs;
 - Added a new approach for merging markers in blocks:
   
-  In v1 the markers are (1) genotyped, (2) filtered and (3) joined as long as they are consecutive and carry the same information. In v2 this does not change.
+  In v1 the markers are (1) genotyped, (2) filtered and (3) joined as long as they are consecutive and carry the same information. In v1.1 this does not change.
 
-  In v2 the markers are (1) ranked, (2) genotyped, (3) filtered, (4) joined as long as they are consecutive in the **ranking** and carry the same information. v1 did not use the ranking.
+  In v1.1 the markers are (1) ranked, (2) genotyped, (3) filtered, (4) joined as long as they are consecutive in the **ranking** and carry the same information. v1 did not use the ranking.
   Inevitably, this results in a more fragmented signal but provides a more realistic and faithful representation of the introgression reflecting regions where the genotyping was either discordant or failed.
   The ranking also represents the strategy that allowed the speedup of ```clrs.r``` (the script that generates the blocks). 
   
