@@ -2,6 +2,7 @@
   <img src="https://github.com/nicolo-tellini/intropipeline/blob/loaded/img/intropipeline.logo.png" alt="intropipeline logo" width="450" height="300"/> 
 </p>
 
+NEWS:
 :rocket: A v.1.1 with several improvements in stability, speed and memory consumption is close to being released.
 
 # intropipeline
@@ -19,9 +20,9 @@ An automated computational framework for detecting *Saccharomyces paradoxus* int
 
 ## Description
 
-v1. is described in Tellini et al 20xx for detecting *S.par* introgressions in *S.cer* strains. <br>
+v1.0. is described in Tellini, et al. Nature Ecology & Evolution (2024), for detecting *S.par* introgressions in *S.cer* strains. <br>
 
-v2. contains the following implementations and changes:
+v1.1. contains the following implementations and changes:
 - ```minimap2``` replaced ```bwa mem``` almost halving the running time (see [Heng Li 2018, Bioinformatics](https://academic.oup.com/bioinformatics/article/34/18/3094/4994778?login=true)) achieving comparable results; <br>
 
   sample: ERR3010122 <br>
