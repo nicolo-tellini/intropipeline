@@ -1,0 +1,23 @@
+[general]
+
+chrLenFile = STRINGchrLenFile
+ploidy = NumPloidy 
+chrFiles = STRINGchrFiles
+telocentromeric = 4000
+coefficientOfVariation = 0.05
+sambamba = Sambamba
+maxThreads = 2 
+gemMappabilityFile = STRINGgemMappabilityFile
+outputDir = STRINGoutputDir
+minExpectedGC=0.35
+maxExpectedGC=0.40
+
+
+[sample]
+
+mateFile = STRINGmateFile
+inputFormat = BAM
+mateOrientation = 0
+
+[control]
+
