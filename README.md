@@ -4,7 +4,7 @@
 
 NEWS:
 
-:rocket:  A v.1.1 with several improvements in stability, speed and memory consumption is close to being released.
+:rocket:  A v.1.1 with several improvements in stability, speed and memory consumption has been released.
 
 # intropipeline
 
