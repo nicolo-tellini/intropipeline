@@ -222,9 +222,10 @@ The number of markers supporting the blocks, the marker density and the info con
 
 ### Softwares
 
-* [FastQC](https://github.com/s-andrews/FastQC/releases/tag/v0.11.9) v. 0.11.9
-* [bwa](https://github.com/lh3/bwa/releases/tag/v0.7.17) v. 0.7.17-r1198-dirty
-* [samtools](https://github.com/samtools/samtools/releases/tag/1.9) v. 1.9
+* [FastQC](https://github.com/s-andrews/FastQC/releases/tag/v0.11.9) 
+* minimap2
+* samtools
+* bcftools
 * [GEM](https://sourceforge.net/projects/gemlibrary/files/gem-library/Binary%20pre-release%203/) v. 1.315 (beta)
 !! The GEM version used for the analyses is 1.759 (not available anymore). 
 * [Control-FREEC](https://github.com/BoevaLab/FREEC/releases/tag/v11.6) v. 11.6; makeGraph.R script was renamed makeplotcnv.R; A copy of all the scripts in [FREEC/scripts/](https://github.com/BoevaLab/FREEC) is in scr. Nevertheless freec has to be installed
