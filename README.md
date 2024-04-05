@@ -244,7 +244,7 @@ The number of markers supporting the blocks, the marker density and the info con
 
 ## Find out more
 
-Marker definition [Methods]()
+Marker definition [Methods](https://www.nature.com/articles/s41559-024-02352-5)
  
 ## Citations
 
