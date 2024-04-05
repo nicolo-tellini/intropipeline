@@ -232,12 +232,14 @@ The number of markers supporting the blocks, the marker density and the info con
 
 ### R libraries
 
-* [data.table](https://rdocumentation.org/packages/data.table/versions/1.14.2) v. 1.14.2
-* [ggplot2](https://github.com/tidyverse/ggplot2/releases/tag/v3.3.5) v. 3.3.5
-* [vcfR](https://github.com/knausb/vcfR/releases/tag/v1.12.0) v. 1.12.0
-* [scales](https://cran.r-project.org/src/contrib/Archive/scales/) v. 1.1.1
-* [rtracklayer](http://www.bioconductor.org/packages/3.11/bioc/html/rtracklayer.html) v. 1.48.0
-* [seqinr](https://cran.r-project.org/src/contrib/Archive/seqinr/) v. 4.2-8
+* [data.table](https://rdocumentation.org/packages/data.table/versions/1.14.2) 
+* [ggplot2](https://github.com/tidyverse/ggplot2/releases/tag/v3.3.5) 
+* [rtracklayer](http://www.bioconductor.org/packages/3.11/bioc/html/rtracklayer.html) 
+* R.filesets
+* GenomicRanges
+* purrr
+* dplyr
+* R.utilis
 
 ## Find out more
 
