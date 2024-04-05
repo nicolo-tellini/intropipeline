@@ -86,3 +86,4 @@ do
   echo $IndS >> $BaseDir/cps/cps.txt
   fi
 done
+wait
