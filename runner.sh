@@ -13,25 +13,25 @@ ref2="EU" ## choose a short name for Spar
 nSamples=1
 nThreads=2
 
-indexing="no"
+indexing="yes"
 
 ## STEP 1
-fastqQC="no" ## fastqc control (required) ("yes","no" or "-" the last is skip)
+fastqQC="yes" ## fastqc control (required) ("yes","no" or "-" the last is skip)
 
 ## STEP 2
-shortReadMapping="no" ## ("yes","no")
+shortReadMapping="yes" ## ("yes","no")
 
 ## STEP 3
-mrkgeno="no" ## ("yes","no")
+mrkgeno="yes" ## ("yes","no")
 
 ## STEP 4
-cnv="no" ## ("yes","no")
+cnv="yes" ## ("yes","no")
 
 ## STEP 5
 intro="yes" ## ("yes","no")
 
 ##STEP6 
-heatmap="yes"
+heatmap="no"
 
 #####################
 ### settings' end ###
