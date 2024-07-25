@@ -151,6 +151,7 @@ then
 	echo "Genotyping markers ..."
         /usr/bin/time -v bash ${BaseDir}/scr/bcftools_marker.sh "${ref1Label}" "${ref2Label}" "${BaseDir}" "${nSamples}" "${nThreads}" > ${BaseDir}/scr/logs/bcftools_marker.out 2> ${BaseDir}/scr/logs/Time.bcftools_marker.err
         /usr/bin/time -v Rscript ${BaseDir}/scr/parser_marker.r "${BaseDir}" > ${BaseDir}/scr/logs/parser_marker.out 2> ${BaseDir}/scr/logs/Time.parser_marker.err
+	wait
 	check=$(grep Exit ${BaseDir}/scr/logs/Time.bcftools_marker.err | cut -d":" -f2 | tr -d "[:blank:]")
 	failed=$(grep failed ${BaseDir}/scr/logs/Time.bcftools_marker.err)
 	if [ $check == 1 ]
