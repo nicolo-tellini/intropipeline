@@ -12,6 +12,7 @@ dependencies:
   - samtools=1.20
   - bcftools=1.20
   - freec=11.6
+  - sambamba=1.0.1
 
   # R base (compatible with Bioconductor 3.20)
   - r-base=4.4.*
@@ -42,4 +43,3 @@ dependencies:
 
   # Manual external tools
   # GEM mapper v1.315 or v1.759 must be manually installed and added to $PATH
-  # Sambamba v0.6.5 provided by the pipeline
