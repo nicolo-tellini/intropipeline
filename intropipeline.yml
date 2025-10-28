@@ -1,0 +1,45 @@
+name: cnv-env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+channel_priority: strict
+
+dependencies:
+  # Core tools
+  - fastqc=0.12.1
+  - minimap2=2.28
+  - samtools=1.20
+  - bcftools=1.20
+  - freec=11.6
+
+  # R base (compatible with Bioconductor 3.20)
+  - r-base=4.4.*
+  - r-optparse
+  - r-getopt
+
+  # CRAN R packages
+  - r-data.table
+  - r-ggplot2
+  - r-purrr
+  - r-dplyr
+  - r-r.utils
+  - r-r.filesets
+
+  # Bioconductor 3.20 packages
+  - bioconductor-genomicranges=1.56.*
+  - bioconductor-rtracklayer=1.64.*
+
+  # System libraries
+  - libxml2
+  - curl
+  - zlib
+  - openssl
+
+  # Optional utilities
+  - pigz
+  - parallel
+
+  # Manual external tools
+  # GEM mapper v1.315 or v1.759 must be manually installed and added to $PATH
+  # Sambamba v0.6.5 provided by the pipeline
