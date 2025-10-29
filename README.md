@@ -4,7 +4,7 @@
 
 NEWS:
 
-:rocket:  A v.1.1 with several improvements in stability, speed and memory consumption has been released.
+:rocket: v.1.2 imporvements in installability. 
 
 # intropipeline
 
@@ -74,6 +74,13 @@ v1.1. contains the following implementations and changes:
   <img src="https://github.com/nicolo-tellini/intropipeline/blob/loaded/img/mrkstrategy.png" alt="Sublime's custom image"/>
 </p>
 
+v1.2. contains the following implementations and changes:
+- small updates to the runner
+- introduced a Mamba environment to simplify the installation of most tools; only GEM requires manual installation
+- the generation of blocks has been reverted to v1.0, while the ranking from v1.1 is retained to facilitate the filtering phase.
+- added a script to generate a heatmap of the introgressed blocks,
+- simplified outputs in ```int```: for each sample, a PDF and a TXT file are generated containing relevant information about the blocks and their overlap with genes
+
 ## Download
  
 :octocat: :
@@ -103,29 +110,11 @@ git clone --recursive https://github.com/nicolo-tellini/intropipeline.git
 - ```scr``` : scripts,</br>
 - ```seq``` : put the FASTQs files here,</br>
 
-### Before starting 
-
-``` gzip -d ./rep/mrktab.gz ```
-
-``` gzip -d ./rep/Asm/*gz```
-
 ### About the fastqs 
 
 Move the FASTQs inside ```./seq/```
 
-Paired-end FASTQs data **must** be gziped and suffixed with **.R1.fastq.gz** and **.R2.fastq.gz**.
-
-### Default 
-
-```./scr/bwa.sh``` uses 2 thread for sample (n.samples = 2).
-
-```./scr/samtools_markers.sh``` uses 1 thread for sample (n.samples = 4).
-
-```./scr/gem.sh``` uses 2 threads.
-
-```./scr/freec.sh``` uses 4 threads.
-
-these values can be changed editing the scripts.
+Paired-end FASTQs data **must** be gziped and suffixed with **_1.fastq.gz** and **_2.fastq.gz**.
 
 ### How to run
 
@@ -208,7 +197,6 @@ A couple of possible scenarious:
 
 :exclamation: Note: Only a few markers in the figure above are represented in the cartoon; 
 
-
 **Case 2**: *not* so abundant markers suporting the block
 <p align="center">
   <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/img/res3.png" alt="Sublime's custom image"/>
@@ -216,7 +204,7 @@ A couple of possible scenarious:
 
 :exclamation: Note: you should *not* exclude the possibility that a large events is supported by a low number of markers as in the example. 
 
-The number of markers supporting the blocks, the marker density and the info concerning the genotype are stored in ```int``` and ```int/AllSegments```. 
+The number of markers supporting the blocks, the marker density and the info concerning the genotype are stored in the TXT in ```int```. 
 
 ## Dependencies
 
@@ -252,3 +240,4 @@ Also, do not forget to cite the papers of the tools used. You can find them insi
 
 * v1.0 released in 2023
 * v1.1 released in 2024
+* v1.2 released in 2025
