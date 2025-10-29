@@ -1,42 +1,41 @@
 #!/bin/bash
 
-#####################
-### user settings ###
-#####################
+############################
+### User configuration   ###
+############################
 
-## S. paradoxus reference assembly
+## Reference assembly
+ref2Label="CBS432"    # S. paradoxus reference assembly label
+ref2="EU"             # Short name for reference
+nSamples=5
+nThreads=8
+indexing="yes"        # Build reference index ("yes","no")
 
-ref2Label="CBS432" ## the Spar assembly you think better fit the origin of the introgressions
+############################
+### Pipeline steps       ###
+############################
 
-ref2="EU" ## choose a short name for Spar
+## STEP 1: Quality control
+fastqQC="yes"          # Run FastQC ("yes","no","-")
 
-nSamples=1
-nThreads=2
+## STEP 2: Short-read mapping
+shortReadMapping="yes" # Map reads ("yes","no")
 
-indexing="yes"
+## STEP 3: Marker genotyping
+mrkgeno="yes"          # Genotype markers ("yes","no")
 
-## STEP 1
-fastqQC="yes" ## fastqc control (required) ("yes","no" or "-" the last is skip)
+## STEP 4: Copy number variation
+cnv="yes"              # CNV analysis ("yes","no")
 
-## STEP 2
-shortReadMapping="yes" ## ("yes","no")
+## STEP 5: Introgression detection
+intro="yes"            # Introgression analysis ("yes","no")
 
-## STEP 3
-mrkgeno="yes" ## ("yes","no")
+## STEP 6: Visualization
+heatmap="yes"          # Generate heatmap ("yes","no")
 
-## STEP 4
-cnv="yes" ## ("yes","no")
-
-## STEP 5
-intro="yes" ## ("yes","no")
-
-##STEP6 
-heatmap="no"
-
-#####################
-### settings' end ###
-#####################
-
+############################
+### End of configuration ###
+############################
 
 BaseDir=$(pwd)
 
