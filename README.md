@@ -7,7 +7,7 @@
 v1.2. contains the following implementations and changes:
 - small updates to the runner
 - introduced a Mamba environment to simplify the installation of most tools; only GEM requires manual installation
-- the generation of blocks has been reverted to v1.0 (see figure below), while the ranking from v1.1 is retained solely to facilitate the filtering phase. Briefly, block boundaries are determined only by chromosome changes and genotype, not by ranking. The rationale behind this choice is that the original strategy provides a more realistic and faithful representation of introgression, preserving regions where genotyping failed due to excessive divergence between species. 
+- the generation of blocks has been reverted to v1.0 (see figure below panel on the left), while the ranking from v1.1 is retained solely to facilitate the filtering phase. Briefly, block boundaries are determined only by chromosome changes and genotype, not by ranking. The rationale behind this choice is that the original strategy provides a more realistic and faithful representation of introgression, preserving regions where genotyping failed due to excessive divergence between species. 
 - added a script to generate a heatmap of the introgressed blocks,
 - simplified outputs in ```int```: for each sample, a PDF and a TXT file are generated containing relevant information about the blocks and their overlap with genes
 
