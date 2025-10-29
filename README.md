@@ -220,27 +220,7 @@ The number of markers supporting the blocks, the marker density and the info con
 
 ## Dependencies
 
-### Softwares
-
-* [FastQC](https://github.com/s-andrews/FastQC/releases/tag/v0.11.9) 
-* minimap2
-* samtools
-* bcftools
-* [GEM](https://sourceforge.net/projects/gemlibrary/files/gem-library/Binary%20pre-release%203/) v. 1.315 (beta)
-!! The GEM version used for the analyses is 1.759 (not available anymore). 
-* [Control-FREEC](https://github.com/BoevaLab/FREEC/releases/tag/v11.6) v. 11.6; makeGraph.R script was renamed makeplotcnv.R; A copy of all the scripts in [FREEC/scripts/](https://github.com/BoevaLab/FREEC) is in scr. Nevertheless freec has to be installed
-* A copy of [sambamba](https://github.com/biod/sambamba/releases/tag/v0.6.5) v. 0.6.5 is provided with the pipeline (no installation required)
-
-### R libraries
-
-* [data.table](https://rdocumentation.org/packages/data.table/versions/1.14.2) 
-* [ggplot2](https://github.com/tidyverse/ggplot2/releases/tag/v3.3.5) 
-* [rtracklayer](http://www.bioconductor.org/packages/3.11/bioc/html/rtracklayer.html) 
-* R.filesets
-* GenomicRanges
-* purrr
-* dplyr
-* R.utilis
+The dependecies are now stored inside ```intropipeline.yml```. [GEM](https://sourceforge.net/projects/gemlibrary/files/gem-library/Binary%20pre-release%203/) can be found and installed at the link.
 
 ## Find out more
 
