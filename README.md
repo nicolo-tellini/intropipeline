@@ -231,6 +231,7 @@ Marker definition [Methods](https://www.nature.com/articles/s41559-024-02352-5)
 ## Citations
 
 Please cite this paper when using intropipeline for your publications.
+Also, do not forget to cite the papers of the tools used. You can find them inside ```intropipeline.yml``` plus GEM and sambamba.
 
 > Ancient and recent origins of shared polymorphisms in yeast </br>
 > Nicolò Tellini, Matteo De Chiara, Simone Mozzachiodi, Lorenzo Tattini, Chiara Vischioni, Elena S. Naumova, Jonas Warringer, Anders Bergström & Gianni Liti </br>
