@@ -120,38 +120,27 @@ Paired-end FASTQs data **must** be gziped and suffixed with **_1.fastq.gz** and 
 Edit ```runner.sh``` :page_with_curl: 
 
 ```{bash}
-#!/bin/bash
+############################
+# User configuration
+############################
 
-#####################
-### user settings ###
-#####################
+# References
+ref1Label="Scc"
+ref2Label="CBS432"   # S. paradoxus reference assembly label
+ref2="EU"            # Short name for reference
 
-## S. paradoxus reference assembly
+# Resources
+nSamples=5
+nThreads=8
 
-ref2Label="CBS432" ## choose the Spar assembly you think better fit the origin of your samples
-
-## short labels (used to name file)
-
-ref2="EU" ## choose a short name for Spar
-
-# STEP 1
-fastqQC="yes" ## fastqc control (required) ("yes","no" or "-" the last is skip)
-
-# STEP 2
-shortReadMapping="yes" ## ("yes","no")
-
-# STEP 3
-mrkgeno="yes" ## ("yes","no")
-
-# STEP 4
-cnv="yes" ## ("yes","no")
-
-# STEP 5
-intro="yes" ## ("yes","no")
-
-#####################
-### settings' end ###
-#####################
+# Switches
+indexing="yes"          # yes|no
+fastqQC="yes"           # yes|no|-
+shortReadMapping="yes"  # yes|no
+mrkgeno="yes"           # yes|no
+cnv="yes"               # yes|no
+intro="yes"             # yes|no
+heatmap="yes"           # yes|no
 ```
 
 Run ```runner.sh``` :runner: 
