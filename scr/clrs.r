@@ -6,6 +6,7 @@
 # Input files : The data are stored in NAS
 # NAS path: 
 
+## !!! A differenza di quanto potrebbe essere riportato nelle righe di sotto il ranking viene usato SOLO per semplificare lo step di filtering e NON per la costruzione dei blocchi.
 # Comments:
 # Differenze con ClrS8
 # - for improving performances only lists and data.table are allowed (unlsess a task can be more easily performed using a DF),
@@ -14,7 +15,6 @@
 # - non rimuove i subtelomeri (perchè sono già esclusi nella tabella di partenza)
 # - rm i markers che stanno nella regone chrXIV pos < 38500 (intro spar-->scer)
 # - non fa QUAL filtering (perchè è gia fatto in fase di mrk genotyp. con bcftools) (funfact: anche senza filtrare per la QUAL i risultati non cambiano drasticamente)
-# - non filtra via le regioni in CNV, spero che bcftool sia abbastanza robusto da riconoscere HET, anche a ploidy 2, in caso di un cromosoma con coverage n+1 (devo testarlo con delle simulazioni)
 # - tanti plots sono spariti, la pipeline per le intro non ne ha necessariamente bisogno (vedi AB etc...)
 # - non ci sono steps che salvano i mrk scartati forse in futuro potrà essere utile reintegrarlo
 
@@ -40,9 +40,9 @@ options(stringsAsFactors = F)
 
 # Variables ----
 
-# ref1Label <- "Scc"
-# ref2Label <- "CBS432"
-# baseDir <- "/home/nico/intropipeline2"
+ # ref1Label <- "Scc"
+ # ref2Label <- "CBS432"
+ # baseDir <- "/home/ntellini/intropipeline"
 
 argsVal <- commandArgs(trailingOnly = T)
 ref1Label <- argsVal[1]
@@ -98,15 +98,15 @@ block_ann <- function(x){
   
   fun_ann <- function(x){
     sp <- ref1Label
-    chr <- as.character(x[5])
-    st <- as.integer(x[9])
-    en <- as.integer(x[10])
+    chr <- as.character(x[4])
+    st <- as.integer(x[2])
+    en <- as.integer(x[3])
     
     a <- ann_l[[sp]][ann_l[[sp]][,1] == chr & ann_l[[sp]][, 5] >= st & ann_l[[sp]][, 4] <= en, c(10, 4, 5)]
     
-    x[13] <- paste(a[,1], sep = "_", collapse = "_")
-    x[14] <- paste(a[,2], sep = "_", collapse = "_")
-    x[15] <- paste(a[,3], sep = "_", collapse = "_")
+    x[12] <- paste(a[,1], sep = "_", collapse = "_")
+    x[13] <- paste(a[,2], sep = "_", collapse = "_")
+    x[14] <- paste(a[,3], sep = "_", collapse = "_")
     return(t(x))
   }
   ann_b <- as.data.table(t(apply(x,1,fun_ann)))
@@ -203,13 +203,13 @@ for (f in mrk_samp_files) {
   
   # butta i mrk i cui raking non sono shared ----
   
-  common_ranked_pos <- intersect( mrk_samp[[ref1Label]][,rank],mrk_samp[[ref2Label]][,rank])
-  
-  mrk_samp[[ref1Label]] <-  mrk_samp[[ref1Label]][match(common_ranked_pos,mrk_samp[[ref1Label]][,rank]),]
-  
-  mrk_samp[[ref2Label]] <-  mrk_samp[[ref2Label]][match(common_ranked_pos,mrk_samp[[ref2Label]][,rank]),]
-  
-  rm(common_ranked_pos)
+   common_ranked_pos <- intersect( mrk_samp[[ref1Label]][,rank],mrk_samp[[ref2Label]][,rank])
+   
+   mrk_samp[[ref1Label]] <-  mrk_samp[[ref1Label]][match(common_ranked_pos,mrk_samp[[ref1Label]][,rank]),]
+   
+   mrk_samp[[ref2Label]] <-  mrk_samp[[ref2Label]][match(common_ranked_pos,mrk_samp[[ref2Label]][,rank]),]
+   
+   rm(common_ranked_pos)
   
   # check, for each mrk position, the allele matches the one on virgin mrk (ALLELES IN THE REFERENCES) ----
   
@@ -268,22 +268,24 @@ for (f in mrk_samp_files) {
   
   # THREE LINE BELOW TAKE ADVANTAGE OF THE RANKING FOR BLOCKING ----
   # spp in questo caso è il genotipo 0/0 e non la species 
-  # nell'altra pipeline l'idea era: rompi il blocco in caso di diverso chromosoma, ranking non consecutivo o species diversa;
-  # qui l'idea è: rompi il blocco in caso di diverso chromosoma, ranking non consecutivo o GT diverso;
+  # qui l'idea è: rompi il blocco in caso di diverso chromosoma o GT diverso;
+  
+  colnames(mrk_samp) <- paste0("col",1:ncol(mrk_samp))
 
-  gr <- GRanges(seqnames = mrk_samp[[1]],ranges= IRanges(start = mrk_samp[[6]],spp=mrk_samp[[5]],width = 1))
+  setDT(mrk_samp)[, grp := rleid(col1, col5)]
   
-  gr <- unlist(GenomicRanges::reduce(split(gr, f=list(spp=as.factor(elementMetadata(gr)$spp)))))
+  df <- mrk_samp[, .(
+    start = min(col2),
+    end   = max(col2),
+    chr   = first(col1),
+    spp   = first(col5),
+    count_mrk = length(col1)
+  ), by = grp]
   
-  df <- data.table(as.data.frame(gr@ranges),chr= as.character(gr@seqnames))
   
-  rm(gr)
-  
-  df[df$names == "0/0","color"] <- "lightblue2"
-  
-  df[df$names == "0/1","color"] <- "gray50"
-  
-  df[df$names == "1/1","color"] <- "red"
+  df[df$spp == "0/0","color"] <- "lightblue2"
+  df[df$spp == "0/1","color"] <- "gray50"
+  df[df$spp == "1/1","color"] <- "red"
   
   df$ymin <- "" 
   df$ymax <- "" 
@@ -306,22 +308,22 @@ for (f in mrk_samp_files) {
   
   setDT(df)
   
-  colnames(mrk_samp)[6] <- "start"
+  # colnames(mrk_samp)[6] <- "start"
+  # 
+  # df[mrk_samp, on = 'start', pSTART := mrk_samp[,2]]
+  # 
+  # colnames(mrk_samp)[6] <- "end"
+  # 
+  # df[mrk_samp, on = 'end', pEND := mrk_samp[,2]]
+  # 
+  # colnames(mrk_samp)[6] <- "rank"
+   
+  df[,diff:= .(end-start+1)] 
   
-  df[mrk_samp, on = 'start', pSTART := mrk_samp[,2]]
-  
-  colnames(mrk_samp)[6] <- "end"
-  
-  df[mrk_samp, on = 'end', pEND := mrk_samp[,2]]
-  
-  colnames(mrk_samp)[6] <- "rank"
-  
-  df[,diff:= .(pEND-pSTART)] 
-  
-  df[,dens:= .(round(abs(width/diff),digits = 2))] # DENSITY MARKER INSIDE A BLOCK (nMARKERS/PHYSICAL LEN)  
+  df[,dens:= .(round(abs(count_mrk/diff),digits = 2))] # DENSITY MARKER INSIDE A BLOCK (nMARKERS/PHYSICAL LEN)  
   
   setDF(df)
-  
+
   blocks <- block_ann(df) # ANNOTATE BLOCK TABLE
   
   blocks <- as.data.frame(apply(blocks, 2, function(x) gsub('\\s+', '', x)))
@@ -332,13 +334,13 @@ for (f in mrk_samp_files) {
   
   blocks <- blocks %>% mutate_at(c('diff', 'dens','ymin','ymax'), as.numeric)
   
-  blocks <- blocks %>% mutate_at(c('start','end','width','pSTART','pEND','gene_start','gene_end'), as.integer)
+  blocks <- blocks %>% mutate_at(c('start','end','diff','gene_start','gene_end'), as.integer)
   
-  blocks <- blocks %>% arrange(factor(blocks[,5], levels = allChr),pSTART)
+  blocks <- blocks %>% arrange(factor(blocks[,4], levels = allChr),start)
   
   # BLUE-RED plot ----
   p <-  ggplot() +
-    geom_rect(blocks,mapping=aes(xmin=pSTART,xmax=pEND,ymin=ymin,ymax=ymax),fill=blocks$color) +
+    geom_rect(blocks,mapping=aes(xmin=start,xmax=end,ymin=ymin,ymax=ymax),fill=blocks$color) +
     geom_rect(chrlen, mapping = aes(xmin=0, xmax=len, ymin=ymin,ymax=ymax),fill="grey99",color="black", linewidth=.3,alpha=0.000001) +
     geom_point(centromeric,mapping = aes(x = (centromeric[,1] + centromeric[,2])/2, y=(centromeric[,4] + centromeric[,5])/2),shape=21) +
     annotate(geom="text", x=as.numeric(-50), y=(centromeric[,4] + centromeric[,5])/2, label=allChr ,color="black",hjust=1.5) +
@@ -362,16 +364,14 @@ for (f in mrk_samp_files) {
   dev.off()
   
   blocks[blocks$color == "lightblue2","color"] <- "sc"
-  
   blocks[blocks$color == "red","color"] <- "sp"
-  
   blocks[blocks$color == "gray50","color"] <- "het"
   
   blocks$ymin <- NULL
   
   blocks$ymax <- NULL
   
-  colnames(blocks) <- c("first","last","mrks","state","chr","species","start","end","len","mrk_dens","gene","gene_start","gene_end")
+  colnames(blocks) <- c("grp","first","last","chr","state","count_mrk","species","len","mrk_dens","gene","gene_start","gene_end")
   
   fwrite(x = blocks,file = paste0(baseDir,"/int/",f,".blocks.txt"),append = F,quote = F,sep = "\t",row.names = F,col.names = T)
   
