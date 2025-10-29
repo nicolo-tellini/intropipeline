@@ -15,7 +15,7 @@ v1.2. contains the following implementations and changes:
 
 # intropipeline
 
-[![Licence](https://img.shields.io/github/license/nicolo-tellini/intropipeline?style=plastic)](https://github.com/nicolo-tellini/intropipeline/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/nicolo-tellini/intropipeline?style=plastic)](https://github.com/nicolo-tellini/intropipeline/blob/main/LICENSE)
 [![Release](https://img.shields.io/github/v/release/nicolo-tellini/intropipeline?style=plastic)](https://github.com/nicolo-tellini/intropipeline/releases/tag/v.1.0.0)
 [![release date](https://img.shields.io/github/release-date/nicolo-tellini/intropipeline?color=violet&style=plastic)](https://github.com/nicolo-tellini/intropipeline/releases/tag/v.1.0.0)
 [![commit](https://img.shields.io/github/last-commit/nicolo-tellini/intropipeline?color=yellow&style=plastic)](https://github.com/nicolo-tellini/intropipeline/graphs/commit-activity)
@@ -66,7 +66,7 @@ v1.1. contains the following implementations and changes:
   | minimap2 + samtools (v1.1) | 3:36 (m:ss) | 1.3  |
   
 - improved the reproducibility of the mapping by implementing the standard samtools workflow according to [samtools' guideline](http://www.htslib.org/workflow/fastq.html)
-- improved the roboustness of the mapping by appending the name of the strain to a checkpoint (cps) file (```./cps/cps.txt```). The strains which names are stored in ```./cps/cps.txt``` will not be mapped again.
+- improved the robustness of the mapping by appending the name of the strain to a checkpoint (cps) file (```./cps/cps.txt```). The strains which names are stored in ```./cps/cps.txt``` will not be mapped again.
 - introduced ```data.table```, ```lapply``` and custom function for large file manipulation for reducing runtime and RAM load.
   example:
   
@@ -85,7 +85,7 @@ v1.1. contains the following implementations and changes:
   | clrs.r (v1) | 0:49 s  | 1.9 |
   | clrs.r (v1.1) | 0:17 s  | 0.7 |
   
-- introduced the variables ```nSamples``` and ```nThreads``` inside ```runner.sh```. The first variable controls the number of samples to run in paralell and the second the per-samples number of threads. ```nSamples``` guarantees a contant number of samples running in parallel; as soon as the count drop of one sample an other will start to run. The definition of these variables affect the scripts ```minimap2.sh``` (which replaces ```bwa.sh```), ```bcftools_markers.sh``` (which replaces ```samtools_marker.sh```) and ```freec.sh```;
+- introduced the variables ```nSamples``` and ```nThreads``` inside ```runner.sh```. The first variable controls the number of samples to run in paralell and the second the per-samples number of threads. ```nSamples``` guarantees a constant number of samples running in parallel; as soon as the count drop of one sample an other will start to run. The definition of these variables affect the scripts ```minimap2.sh``` (which replaces ```bwa.sh```), ```bcftools_markers.sh``` (which replaces ```samtools_marker.sh```) and ```freec.sh```;
 - corrected an error that prevented the detection of the CNVs;
 - Added a new approach for merging markers in blocks:
   
@@ -181,7 +181,7 @@ An Alpechin strain:
 </p>
 
 
-## How to interprer the result
+## How to interpret the result
 
 Blue-Red plots provides an overview of potential introgressed DNA across the genome.
 The interpretation of the results is a process that require the integration of different data the pipeline produces.
@@ -198,7 +198,7 @@ How are markers distributed inside the *S.par* block?
 
 A couple of possible scenarious: 
 
-**Case 1**: abundant markers suporting the block
+**Case 1**: abundant markers supporting the block
 <p align="center">
   <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/img/res2.png" alt="Sublime's custom image"/>
 </p>
@@ -214,9 +214,9 @@ A couple of possible scenarious:
 
 The number of markers supporting the blocks, the marker density and the info concerning the genotype are stored in the TXT in ```int```. 
 
-## Dependencies
+## dependencies
 
-The dependecies are now stored inside ```intropipeline.yml```. [GEM](https://sourceforge.net/projects/gemlibrary/files/gem-library/Binary%20pre-release%203/) can be found and installed at the link. ```sambamba``` is provided in scr dir.
+The dependencies are now stored inside ```intropipeline.yml```. [GEM](https://sourceforge.net/projects/gemlibrary/files/gem-library/Binary%20pre-release%203/) can be found and installed at the link. ```sambamba``` is provided in scr dir.
 
 To install the env: ```mamba create -f intropipeline.yml``` and ```mamba activate intropipeline-env```.
 
@@ -231,7 +231,7 @@ Also, do not forget to cite the papers of the tools used. You can find them insi
 
 > Ancient and recent origins of shared polymorphisms in yeast </br>
 > Nicolò Tellini, Matteo De Chiara, Simone Mozzachiodi, Lorenzo Tattini, Chiara Vischioni, Elena S. Naumova, Jonas Warringer, Anders Bergström & Gianni Liti </br>
-> Nature Ecologya and Evolution, 2024, https://doi.org/10.1038/s41559-024-02352-5
+> Nature Ecology and Evolution, 2024, https://doi.org/10.1038/s41559-024-02352-5
 
 ```
 @article{tellini2024ancient,
