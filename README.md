@@ -4,7 +4,14 @@
 
 NEWS:
 
-:rocket: v.1.2 imporvements in installability. 
+:rocket: 
+
+v1.2. contains the following implementations and changes:
+- small updates to the runner
+- introduced a Mamba environment to simplify the installation of most tools; only GEM requires manual installation
+- the generation of blocks has been reverted to v1.0 (see figure below), while the ranking from v1.1 is retained solely to facilitate the filtering phase. Briefly, block boundaries are determined only by chromosome changes and genotype, not by ranking. The rationale behind this choice is that the original strategy provides a more realistic and faithful representation of introgression, preserving regions where genotyping failed due to excessive divergence between species. 
+- added a script to generate a heatmap of the introgressed blocks,
+- simplified outputs in ```int```: for each sample, a PDF and a TXT file are generated containing relevant information about the blocks and their overlap with genes
 
 # intropipeline
 
@@ -19,14 +26,27 @@ An automated computational framework for detecting *Saccharomyces paradoxus* int
   <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/img/logo2.png" alt="Sublime's custom image"/>
 </p>
 
-## Description
+## Quick Start
 
-v1.2. contains the following implementations and changes:
-- small updates to the runner
-- introduced a Mamba environment to simplify the installation of most tools; only GEM requires manual installation
-- the generation of blocks has been reverted to v1.0 (see figure below), while the ranking from v1.1 is retained solely to facilitate the filtering phase. Briefly, block boundaries are determined only by chromosome changes and genotype, not by ranking. The rationale behind this choice is that the original strategy provides a more realistic and faithful representation of introgression, preserving regions where genotyping failed due to excessive divergence between species. 
-- added a script to generate a heatmap of the introgressed blocks,
-- simplified outputs in ```int```: for each sample, a PDF and a TXT file are generated containing relevant information about the blocks and their overlap with genes
+1. Clone the repository:
+   ```sh
+   git clone --recursive https://github.com/nicolo-tellini/intropipeline.git
+   ```
+2. Install dependencies:
+   ```sh
+   mamba create -f intropipeline.yml
+   mamba activate intropipeline-env
+   ```
+3. Install GEM
+4. Place your gzipped paired-end FASTQ files in the `seq` directory, named as `*_1.fastq.gz` and `*_2.fastq.gz`.
+5. Configure options in `runner.sh`.
+6. Run the pipeline:
+   ```sh
+   nohup bash runner.sh &
+   ```
+7. Find results in the `int` directory.
+
+## Older versions
 
 v1.1. contains the following implementations and changes:
 - ```minimap2``` replaced ```bwa mem``` almost halving the running time (see [Heng Li 2018, Bioinformatics](https://academic.oup.com/bioinformatics/article/34/18/3094/4994778?login=true)) achieving comparable results; <br>
