@@ -220,7 +220,7 @@ The number of markers supporting the blocks, the marker density and the info con
 
 ## Dependencies
 
-The dependecies are now stored inside ```intropipeline.yml```. [GEM](https://sourceforge.net/projects/gemlibrary/files/gem-library/Binary%20pre-release%203/) can be found and installed at the link.
+The dependecies are now stored inside ```intropipeline.yml```. [GEM](https://sourceforge.net/projects/gemlibrary/files/gem-library/Binary%20pre-release%203/) can be found and installed at the link. ```sambamba``` is provided in scr dir.
 
 To install the env: ```mamba create -f intropipeline.yml``` and ```mamba activate intropipeline-env```.
 
