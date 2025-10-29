@@ -23,7 +23,7 @@ setwd(BaseDir)
 
 # comment the lines below ----
 
-# BaseDir <- "/home/nico/intropipeline2/"
+# BaseDir <- "/home/ntellini/intropipeline"
 # refBonLabel <- "Scc"
 # refBon <- "Scc"
 # setwd(BaseDir)
@@ -44,7 +44,8 @@ Events <- data.frame()
 for (ind in allRData) {
   print(ind)
   allEv <- fread(paste0("int/",ind),data.table = F)
-  allEv <- allEv[allEv$species == "sp" & allEv$mrks >=5,]
+  allEv <- allEv[allEv$species == "sp" | allEv$species == "het",]
+  allEv <- allEv[allEv$count_mrk >=5,]
   allEv$sample <- sapply(strsplit(ind,"\\."),"[[",1)
   Events <- rbind(Events,allEv)
   rm(allEv)
@@ -65,9 +66,9 @@ for (indC in allChr) {
     samples <- unique(Events$sample)
     
     # tieni solo chr, fisrt , end e Scc ----
-    Events <- Events[,c(5,7,8,14)]
+    Events <- Events[,c(4,2,3,7)]
     
-    Events$Evlength <- Events$end - Events$start
+    Events$Evlength <- Events$last - Events$first
     
     Events$chr <- as.factor(Events$chr)
     
@@ -80,6 +81,8 @@ for (indC in allChr) {
     
     allEv0temp <- Events[Events[,"Evlength"] == 0,]
     Events <- Events[!(Events[,"Evlength"] == 0),]
+    
+    colnames(Events)[2:3] <- c("start","end")
     
     if ( nrow(Events) > 0 ) {
       pointsall <- c()
@@ -224,6 +227,7 @@ chrlen[,c(2,3)] <- chrlen[,c(2,3)] /1000
 
 tabplot3[,6] <- as.numeric(tabplot3[,6])
 tabplot3[,7] <- as.numeric(tabplot3[,7])
+tabplot3 <- unique(tabplot3[,])
 
 pHeatRainbow <- ggplot(tabplot3) + 
   geom_rect(tabplot3,mapping = aes(xmin=start, xmax=end, ymin=ymin,ymax=ymax,fill=freq)) +
@@ -248,4 +252,4 @@ pdf(file = pPath, width = 16, height = 10)
 print(pHeatRainbow)
 dev.off()
 
-fwrite(tabplot2,paste0(BaseDir,"/int/allintrogressions.heatmap.txt"),append = F,quote = F,sep = "\t",row.names = F,col.names = T)
+fwrite(tabplot3,paste0(BaseDir,"/int/allintrogressions.heatmap.txt"),append = F,quote = F,sep = "\t",row.names = F,col.names = T)
