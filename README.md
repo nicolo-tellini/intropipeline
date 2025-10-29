@@ -2,9 +2,7 @@
   <img src="https://github.com/nicolo-tellini/intropipeline/blob/loaded/img/intropipeline.logo.png" alt="intropipeline logo" width="450" height="300"/> 
 </p>
 
-NEWS:
-
-:rocket: 
+## 🚀 New Release 2025-10-29
 
 v1.2. contains the following implementations and changes:
 - small updates to the runner
