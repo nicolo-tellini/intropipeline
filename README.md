@@ -21,7 +21,12 @@ An automated computational framework for detecting *Saccharomyces paradoxus* int
 
 ## Description
 
-v1.0. is described in Tellini, et al. 2024 Nat. EcoEvo, for detecting *S.par* introgressions in *S.cer* strains. <br>
+v1.2. contains the following implementations and changes:
+- small updates to the runner
+- introduced a Mamba environment to simplify the installation of most tools; only GEM requires manual installation
+- the generation of blocks has been reverted to v1.0 (see figure below), while the ranking from v1.1 is retained solely to facilitate the filtering phase. Briefly, block boundaries are determined only by chromosome changes and genotype, not by ranking. The rationale behind this choice is that the original strategy provides a more realistic and faithful representation of introgression, preserving regions where genotyping failed due to excessive divergence between species. 
+- added a script to generate a heatmap of the introgressed blocks,
+- simplified outputs in ```int```: for each sample, a PDF and a TXT file are generated containing relevant information about the blocks and their overlap with genes
 
 v1.1. contains the following implementations and changes:
 - ```minimap2``` replaced ```bwa mem``` almost halving the running time (see [Heng Li 2018, Bioinformatics](https://academic.oup.com/bioinformatics/article/34/18/3094/4994778?login=true)) achieving comparable results; <br>
@@ -67,19 +72,13 @@ v1.1. contains the following implementations and changes:
   In v1 the markers are (1) genotyped, (2) filtered and (3) joined as long as they are consecutive and carry the same information. In v1.1 this does not change.
 
   In v1.1 the markers are (1) ranked, (2) genotyped, (3) filtered, (4) joined as long as they are consecutive in the **ranking** and carry the same information. v1 did not use the ranking.
-  Inevitably, this results in a more fragmented signal but provides a more realistic and faithful representation of the introgression reflecting regions where the genotyping was either discordant or failed.
-  The ranking also represents the strategy that allowed the speedup of ```clrs.r``` (the script that generates the blocks). 
+  Inevitably, this results in a more fragmented signal. The ranking also represents the strategy that allowed the speedup of ```clrs.r``` (the script that generates the blocks). 
   
   <p align="center">
   <img src="https://github.com/nicolo-tellini/intropipeline/blob/loaded/img/mrkstrategy.png" alt="Sublime's custom image"/>
 </p>
 
-v1.2. contains the following implementations and changes:
-- small updates to the runner
-- introduced a Mamba environment to simplify the installation of most tools; only GEM requires manual installation
-- the generation of blocks has been reverted to v1.0, while the ranking from v1.1 is retained to facilitate the filtering phase.
-- added a script to generate a heatmap of the introgressed blocks,
-- simplified outputs in ```int```: for each sample, a PDF and a TXT file are generated containing relevant information about the blocks and their overlap with genes
+v1.0. is described in Tellini, et al. 2024 Nat. EcoEvo, for detecting *S.par* introgressions in *S.cer* strains. <br>
 
 ## Download
  
