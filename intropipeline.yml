@@ -1,4 +1,4 @@
-name: cnv-env
+name: intropipeline-env
 channels:
   - conda-forge
   - bioconda
