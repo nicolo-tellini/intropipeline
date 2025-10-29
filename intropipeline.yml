@@ -11,7 +11,6 @@ dependencies:
   - samtools=1.20
   - bcftools=1.20
   - control-freec=11.6
-  - sambamba=1.0.1
 
   # R base (compatible with Bioconductor 3.20)
   - r-base=4.4.*
