@@ -21,7 +21,7 @@ v1.2. contains the following implementations and changes:
 An automated computational framework for detecting *Saccharomyces paradoxus* introgressions in *Saccharomyces cerevisiae* strains from paired-end illumina sequencing.
 
 <p align="center">
-  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/img/logo2.png" alt="Sublime's custom image"/>
+  <img src="https://github.com/nicolo-tellini/intropipeline/blob/master/img/scheme.png" alt="scheme" width=1000/>
 </p>
 
 ## Quick Start
