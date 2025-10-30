@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/nicolo-tellini/intropipeline/blob/loaded/img/intropipeline.logo.png" alt="intropipeline logo" width="450" height="300"/> 
+  <img src="https://github.com/nicolo-tellini/intropipeline/blob/master/img/intropipeline.logo.png" alt="intropipeline logo" width="450" height="300"/> 
 </p>
 
 ## 🚀 New Release 2025-10-29
