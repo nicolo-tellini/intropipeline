@@ -18,7 +18,7 @@ v1.2. contains the following implementations and changes:
 [![release date](https://img.shields.io/github/release-date/nicolo-tellini/intropipeline?color=violet&style=plastic)](https://github.com/nicolo-tellini/intropipeline/releases/tag/v.1.0.0)
 [![commit](https://img.shields.io/github/last-commit/nicolo-tellini/intropipeline?color=yellow&style=plastic)](https://github.com/nicolo-tellini/intropipeline/graphs/commit-activity)
 
-An automated computational framework for detecting *Saccharomyces paradoxus* introgressions in *Saccharomyces cerevisiae* strains from paired-end illumina sequencing.
+An automated computational framework for detecting *Saccharomyces paradoxus* introgression in *Saccharomyces cerevisiae* strains from paired-end illumina sequencing.
 
 <p align="center">
   <img src="https://github.com/nicolo-tellini/intropipeline/blob/master/img/scheme.png" alt="scheme" width=1000/>
