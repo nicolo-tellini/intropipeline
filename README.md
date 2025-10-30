@@ -185,7 +185,7 @@ Blue-Red plots provides an overview of potential introgressed DNA across the gen
 The interpretation of the results is a process that require the integration of different data the pipeline produces.
 
 <p align="center">
-  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/img/res1.png" alt="Sublime's custom image"/>
+  <img src="https://github.com/nicolo-tellini/intropipeline/blob/master/img/res1.png" alt="Sublime's custom image"/>
 </p>
 
 :exclamation: Reminder: blocks are defined as consecutive markers besring the same genomic info (Homo S.cer, Homo S.par, Het).
@@ -198,14 +198,14 @@ A couple of possible scenarious:
 
 **Case 1**: abundant markers supporting the block
 <p align="center">
-  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/img/res2.png" alt="Sublime's custom image"/>
+  <img src="https://github.com/nicolo-tellini/intropipeline/blob/master/img/res2.png" alt="Sublime's custom image"/>
 </p>
 
 :exclamation: Note: Only a few markers in the figure above are represented in the cartoon; 
 
 **Case 2**: *not* so abundant markers suporting the block
 <p align="center">
-  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/img/res3.png" alt="Sublime's custom image"/>
+  <img src="https://github.com/nicolo-tellini/intropipeline/blob/master/img/res3.png" alt="Sublime's custom image"/>
 </p>
 
 :exclamation: Note: you should *not* exclude the possibility that a large events is supported by a low number of markers as in the example. 
