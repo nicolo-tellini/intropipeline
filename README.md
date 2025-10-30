@@ -175,7 +175,7 @@ Ex.
 An Alpechin strain:
 
 <p align="center">
-  <img src="https://github.com/nicolo-tellini/introspect/blob/loaded/img/example-result.png" alt="res"/>
+  <img src="https://github.com/nicolo-tellini/intropipeline/blob/master/img/example-results.png" alt="res"/>
 </p>
 
 
