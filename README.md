@@ -93,7 +93,7 @@ v1.1. contains the following implementations and changes:
   Inevitably, this results in a more fragmented signal. The ranking also represents the strategy that allowed the speedup of ```clrs.r``` (the script that generates the blocks). 
   
   <p align="center">
-  <img src="https://github.com/nicolo-tellini/intropipeline/blob/loaded/img/mrkstrategy.png" alt="Sublime's custom image"/>
+  <img src="https://github.com/nicolo-tellini/intropipeline/blob/master/img/mrkstrategy.png" alt="mrk stategy"/>
 </p>
 
 v1.0. is described in Tellini, et al. 2024 Nat. EcoEvo, for detecting *S.par* introgressions in *S.cer* strains. <br>
